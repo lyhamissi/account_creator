@@ -1,18 +1,21 @@
 import { useState } from 'react'
-import { BrowserRouter, Route, Router } from 'react-router-dom'
+import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
 import Home from './Component/Home'
+import Layout from './Component/Layout'
 
 
 function App() {
 
   return (
     <>
-    <BrowserRouter>
-    <Router>
-      <Route path='/home' element={<Home/>}/>
-    </Router>
-    </BrowserRouter>
-     
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Layout/>}>
+          <Route path='/home' element={<Home />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
