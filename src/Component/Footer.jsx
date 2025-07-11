@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
         <div className="footer-section contact">
           <h4>Contact Us</h4>
-          <p>Email: russianheisenbergwalter@gmail.com</p>
+          <p>Email:  <a style={{ marginLeft: '0.5rem', display: 'inline' }} href="mailto:russianheisenbergwalter@gmail.com">russianheisenbergwalter@gmail.com</a></p>
         </div>
       </div>
       <div className="footer-bottom">

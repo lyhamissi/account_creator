@@ -5,10 +5,17 @@
 }
 
 .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   background-color: #1E2A38;
   color: white;
   padding: 1rem 2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .navbar-inner {
   display: flex;
@@ -57,8 +64,12 @@
 
 @media (max-width: 768px) {
   .hamburger {
-    display: block;
+    display: flex;
+    position: absolute;
+    top: 0.5rem;
+    right: 2rem;
   }
+
 
   .nav-links {
     display: none;
