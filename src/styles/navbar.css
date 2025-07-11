@@ -10,56 +10,124 @@
   left: 0;
   width: 100%;
   z-index: 1000;
-  background-color: #1E2A38;
-  color: white;
+  background-color: white;
+  color: #1E2A38;
   padding: 1rem 2rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
 
 .navbar-inner {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .logo {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: white;
+  color: #1E2A38;
 }
 
 .hamburger {
   display: none;
   font-size: 1.8rem;
   cursor: pointer;
-  color: white;
+  color: #1E2A38;
 }
 
 .nav-links {
   display: flex;
-  gap: 1.2rem;
+  gap: 1.5rem;
   list-style: none;
   align-items: center;
 }
 
-.nav-links a {
-  color: white;
+.nav-links li a {
+  position: relative;
+  color: #1E2A38;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.2s;
+  font-size: 0.95rem;
+  padding: 0.3rem 0.4rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
 }
 
-.nav-links a:hover {
-  color: #F7931A;
+.nav-links li a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  border-radius: 50%;
+  height: 2px;
+  width: 0%;
+  background-color: #1E2A38;
+  transition: width 0.3s ease;
 }
 
-.btn-login {
-  background-color: #F7931A;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
-  color: white !important;
+.nav-links li a:hover::after {
+  width: 100%;
+}
+
+.nav-linksli a:hover {
+  color: #1E2A38;
+}
+
+
+.btn-logins {
+  background-color: #1e2a380f;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  color: #1E2A38;
+  font-weight: 600;
+  border: 1px solid #1E2A38;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+.btn-logins a{
+  text-decoration: none;
+  color: #1E2A38;
+}
+.btn-logins a:hover{
+  color: white;
+}
+.btn-logins:hover {
+  background-color: #1E2A38;
+  color: white;
+}
+.admin-navbar {
+  background-color: white;
+  color: #1E2A38;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.admin-navbar button {
+  background-color: #1E2A38;
+  border: 1px solid #1E2A38;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.admin-navbar button:hover {
+  background-color: #1e2a380c;
+  border-color: #1E2A38;
+  color: #1E2A38;
 }
 
 @media (max-width: 768px) {

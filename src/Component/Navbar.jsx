@@ -17,7 +17,7 @@ const Navbar = () => {
           {/* <li><a href="/applications">My Applications</a></li> */}
           <li><a href="/about">About</a></li>
           <li><a href="/contact">Contact</a></li>
-          <li><a className="btn-login" href="/login">Login</a></li>
+          <button className="btn-logins"><a  href="/admin/login">Login</a></button>
         </ul>
       </div>
     </nav>

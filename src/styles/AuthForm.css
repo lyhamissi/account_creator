@@ -1,67 +1,88 @@
 .auth-container {
-  background-color: #1E2A38;
+  background-color: white;
   color: #E2E8F0;
   padding: 3rem 2rem;
   max-width: 400px;
   margin: 10rem auto;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .auth-container h2 {
   margin-bottom: 1.5rem;
-  color: #F7931A;
+  color: #1E2A38;
+  font-weight: 700;
+  font-size: 1.8rem;
 }
 
 .auth-form {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .auth-form input {
-  padding: 0.2rem;
+  padding: 0.6rem 0.8rem;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   font-size: 1rem;
-  background-color: #2C3E50;
-  color: #E2E8F0;
+  background-color: #1e2a381c; 
+  color: #1E2A38;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .auth-form input::placeholder {
-  color: #94A3B8;
+  color: #1E2A38;
+}
+
+.auth-form input:focus {
+  background-color: #1e2a381c;
+  box-shadow: 0 0 6px #F7931A;
+  outline: none;
 }
 
 .auth-form button {
-  padding: 0.8rem;
-  background-color: #F7931A;
+  padding: 0.85rem;
+  background-color: #1E2A38;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
   color: white;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .auth-form button:hover {
-  background-color: #d77d0c;
+  background-color: #1E2A38;
+  transform: translateY(-2px);
 }
 
 .auth-switch {
-  margin-top: 1rem;
+  margin-top: 1.2rem;
+  font-size: 0.9rem;
 }
 
 .auth-switch a {
-  color: #F7931A;
+  color: #1E2A38;
   text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease;
 }
+
+.auth-switch a:hover {
+  color: #1E2A38;
+  text-decoration: underline;
+}
+
 .input-group {
   display: flex;
   align-items: center;
-  background-color: #2C3E50;
-  padding: 0.5rem;
-  border-radius: 5px;
+  background-color: #273746;
+  padding: 0.5rem 0.8rem;
+  border-radius: 6px;
 }
 
 .input-group input {
@@ -74,10 +95,21 @@
   outline: none;
 }
 
-.input-icon {
-  color: #F7931A;
-  font-size: 1.1rem;
+.input-group input::placeholder {
+  color: #94A3B8;
 }
+
+.input-group input:focus {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.input-icon {
+  color: #1E2A38;
+  font-size: 1.2rem;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
   .auth-container {
     width: 100%;
